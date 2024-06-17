@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark gray text */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    color: #ffffff;
+    padding: 10px 0; /* Decreased padding for smaller height */
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Decreased font size */
+}
+
+header nav {
+    margin-top: 10px; /* Decreased margin */
+    background: #4682B4; /* Steel Blue */
+    border-radius: 15px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px; /* Decreased padding */
+}
+
+header .menu-toggle {
+    display: none;
+    font-size: 2em; /* Decreased font size */
+    cursor: pointer;
+    color: #ffffff;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 10px; /* Decreased margin */
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em; /* Decreased font size */
+}
+
+header .btn, #theme-icon {
+    background: #32CD32; /* Lime Green */
+    color: #ffffff;
+    padding: 5px 10px; /* Decreased padding */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em; /* Decreased font size */
+}
+
+header .btn:hover, #theme-icon:hover {
+    background: #228B22; /* Forest Green */
+}
+
+section {
+    padding: 70px 20px 50px; /* Adjusted top padding to offset the fixed header */
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #f4f4f4; /* Light gray */
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    color: #007bff; /* All icons will have this color */
+    font-size: 24px; /* Adjust the size as needed */
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #1E90FF; /* Dodger Blue */
+    text-decoration: none;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #32CD32; /* Lime Green */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    color: #595757;
+    text-align: center;
+    padding: 10px;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e; /* Dark mode background */
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background: #333333; /* Dark mode header background */
+}
+
+body.dark-mode .card {
+    background: #333333; /* Dark mode card background */
+    color: #ffffff;
+}
+
+body.dark-mode form input,
+body.dark-mode form textarea {
+    background: #444444; /* Dark mode form background */
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+body.dark-mode form button {
+    background: #666666; /* Dark mode button background */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 10px; /* Adjusted padding for smaller screens */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+
+    header nav {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+
+    header .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #4682B4; /* Steel Blue */
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav a {
+        padding: 10px 0;
+        display: block;
+    }
+
+    header .btn, #theme-icon {
+        padding: 10px 15px; /* Adjusted padding */
+    }
+
+    section {
+        padding-top: 100px; /* Adjusted padding to account for header */
+    }
+}
